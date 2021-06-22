@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Open Sans","PingFang SC","Microsoft YaHei","Helvetica Neue","Hiragino Sans GB","WenQuanYi Micro Hei",Arial,sans-serif;
+}
+
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+.bg {
+  background: url(/Link/WeChat/bg.jpg);
+  background-size: cover;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  z-index: -1;
+}
+
+.slogan {
+  color: white;
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.mask {
+  width: 360px;
+  height: 360px;
+  -webkit-animation: move 20s infinite;
+          animation: move 20s infinite;
+  background-image: url(/Link/WeChat/bg.png);
+  background-size: cover;
+  -webkit-mask: url(/Link/WeChat/wx.svg);
+          mask: url(/Link/WeChat/wx.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+
+
+.footer {
+  color: white;
+  clear: both;
+  display: block;
+  text-align: center;	
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
