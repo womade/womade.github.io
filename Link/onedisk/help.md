@@ -100,6 +100,7 @@ php one.php upload:file up/ /test/
 - 接口地址一：/?/api/upload/images
 - 接口地址二：/?/api/upload/blog_images
 - POST参数名：file
+
 接口地址一图片上传到`images`文件夹下。
 接口地址二图片上传到`images/blog`文件夹下。
 上传文件大小限制4MB.
