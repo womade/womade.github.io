@@ -6,8 +6,9 @@
 
 
 ## NGINX 伪静态配置
+[可选] 去掉地址栏中的/?/，Apache 无需配置。
 ```
- if (!-f $request_filename){
+if (!-f $request_filename){
 set $rule_0 1$rule_0;
 }
 if (!-d $request_filename){
@@ -19,7 +20,7 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 ```
 
 ## 计划任务
-[可选]**推荐配置**，非必需。后台定时刷新缓存，可增加前台访问的速度。
+[可选] 后台定时刷新缓存，可增加前台访问的速度。
 ### 每小时刷新一次token
 ```
 0 * * * * /具体路径/php /程序具体路径/one.php token:refresh
@@ -93,6 +94,12 @@ php one.php upload:file up/ /test/
 ```
 
 ## 图片上传
-https://xxx.xxx.xxx/?/images
+你的域名 + /?/images，见[图床设置](?/admin/images "图床设置")
 
 ## 图片上传 API
+- 接口地址一：/?/api/upload/images
+- 接口地址二：/?/api/upload/blog_images
+- POST参数名：file
+接口地址一图片上传到`images`文件夹下。
+接口地址二图片上传到`images/blog`文件夹下。
+上传文件大小限制4MB.
