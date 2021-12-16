@@ -19,6 +19,8 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 }
 ```
 
+---
+
 ## 计划任务
 ##### [可选] 后台定时刷新缓存，可增加前台访问的速度。
 ### 每小时刷新一次token
@@ -30,6 +32,8 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 ```
 */10 * * * * /具体路径/php /程序具体路径/one.php cache:refresh
 ```
+
+---
 
 ## 特殊文件实现功能
 ` README.md `、`HEAD.md` 、 `.password`、`.tips`、`index.html` 特殊文件使用
@@ -49,6 +53,8 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 **直接输出网页:**
 > 在 OneDrive 的文件夹中添加`index.html` 文件，程序会直接输出网页而不列目录。
 > 配合 文件展示设置-直接输出 效果更佳。
+
+---
 
 ## 命令行功能
 仅能在 PHP CLI 模式下运行
@@ -92,6 +98,8 @@ php one.php upload:file demo.zip /test/d.zip
 //上传up/ 到OneDrive /test/ 目录
 php one.php upload:file up/ /test/
 ```
+
+---
 
 ## 图片上传
 ##### 你的域名 + /?/images，见[图床设置](?/admin/images "图床设置")
