@@ -20,7 +20,6 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 
 ## 计划任务
 [可选]**推荐配置**，非必需。后台定时刷新缓存，可增加前台访问的速度。
-```
 ### 每小时刷新一次token
 ```
 0 * * * * /具体路径/php /程序具体路径/one.php token:refresh
@@ -51,20 +50,23 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 > 配合 文件展示设置-直接输出 效果更佳。
 
 ## 命令行功能
-仅能在PHP CLI模式下运行
+仅能在 PHP CLI 模式下运行
 
 **清除缓存:**
 ```
 php one.php cache:clear
 ```
+
 **刷新缓存:**
 ```
 php one.php cache:refresh
 ```
+
 **刷新令牌:**
 ```
 php one.php token:refresh
 ```
+
 **上传文件:**  
 ```
 php one.php upload:file 本地文件 [OneDrive文件]
