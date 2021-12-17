@@ -23,7 +23,7 @@ rewrite ^/(.*)$ /index.php?/$1 last;
 
 ## 计划任务
 ##### [可选] 后台定时刷新缓存，可增加前台访问的速度。
-### 每小时刷新一次token
+### 每小时刷新一次 token
 ```
 0 * * * * /具体路径/php /程序具体路径/one.php token:refresh
 ```
@@ -105,9 +105,7 @@ php one.php upload:file up/ /test/
 ##### 你的域名 + /?/images，见[图床设置](?/admin/images "图床设置")
 
 ## 图片上传 API
-- 接口地址一：/?/api/upload/images
-- 接口地址二：/?/api/upload/blog_images
-- POST参数名：file
-##### 接口地址一图片上传到`images`文件夹下。
-##### 接口地址二图片上传到`images/blog`文件夹下。
-##### 上传文件大小限制4MB.
+| 接口地址                   | POST 参数名 | 图片上传路径                 | 图片大小限制 |
+| ------------------------- | ----------- | --------------------------- | ----------- |
+| /?/api/upload/images      | file        | `images/Y/m/d/His.png`      | 4MB         |
+| /?/api/upload/blog_images | file        | `images/blog/Y/m/d/His.png` | 4MB         |
