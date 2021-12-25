@@ -1,7 +1,5 @@
 # 使用帮助
 
-##### 此页面还没写完，有空催一下楊遠徵。😁
-
 
 
 ---
@@ -9,7 +7,7 @@
 
 
 ### **⚙ NGINX 伪静态配置**
-##### [可选] 去掉地址栏中的/?/，Apache 无需配置。
+##### [可选] 去掉地址栏中的 ` /?/ ` ，Apache 无需配置。
 ```
 if (!-f $request_filename){
 set $rule_0 1$rule_0;
@@ -135,3 +133,16 @@ php one.php upload:file up/ /test/
 | /?/api/upload/images      | file        | `images/Y/m/d/His.png`      | 4MB         |
 | /?/api/upload/blog_images | file        | `images/blog/Y/m/d/His.png` | 4MB         |
 
+
+
+---
+
+
+
+### 🔗 链接特殊功能
+
+> 在链接后面 + `&s` 或 `?s` 直接进入在线预览页面，没有预览规则自动下载。
+
+> 在链接后面 + `&d` 或 `?d` 直接进入文件下载界面。
+
+> 在链接后面 + `&p` 或 `?p` 直接启动代理下载。
